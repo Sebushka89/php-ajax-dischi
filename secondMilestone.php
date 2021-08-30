@@ -16,11 +16,11 @@
 
     <div id="app">
 
-        <nav>
+        <header>
             <div class="logo-spotify">
                 <img class="wd" src="./img/spotify-logo.png" alt="Spotify Logo">
             </div>
-        </nav>
+        </header>
     
         <main>
             <section class="discs-container">
@@ -28,7 +28,7 @@
                 <div class="album-container" v-for="disc in discs">
                     
                     <div class="inner">
-                        <img class="wd" :src="disc.poster" alt="">
+                        <img class="cover" :src="disc.poster" alt="">
                         <h3> {{disc.title}} </h3>
                         <p> {{disc.author}} </p>
                         <p> {{disc.year}} </p>

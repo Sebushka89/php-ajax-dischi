@@ -1,7 +1,7 @@
 <?php
 
 // ho bisogno dell'array dal db
-require_once __DIR__ . "/../database/discsDb.php";
+require_once __DIR__ . "/../database/discDb.php";
 
 // ho bisogno funzione che mi scrive l'array in json
 require_once __DIR__ . "/../functions/printJson.php";

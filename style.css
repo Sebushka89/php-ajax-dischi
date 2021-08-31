@@ -15,12 +15,15 @@ header{
 header img{
     margin: 10px 0;
 }
+.ricerca{
+    padding-right: 24px;
+}
 img{
     width: 50px;        
 }
 main {
     width: 100%;
-    height: 875px;
+    height: calc(100vh - 61.5px);
     background-color: #1e2d3b;
 }
 .discs-container {

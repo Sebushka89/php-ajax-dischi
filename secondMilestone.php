@@ -21,8 +21,9 @@
                 <img src="./img/spotify-logo.png" alt="Spotify Logo">
             </div>
             <div class="ricerca">
+            <label style="color:white" for="genre">Filtra per genere:</label>
             <select v-model="filter" @change="filteredDiscs()" name="genre" id="genre">
-                    <option value="All">Tutti i generi  </option>
+                    <option value="All">All</option>
                     <option value="Rock">Rock</option>
                     <option value="Metal">Metal</option>
                     <option value="Jazz">Jazz</option>
@@ -33,20 +34,15 @@
     
         <main>
             <section class="discs-container">
-    
                 <div class="album-container" v-for="disc in discs">
-                    
                     <div class="inner">
                         <img class="cover" :src="disc.poster" alt="">
                         <h3> {{disc.title}} </h3>
                         <p> {{disc.author}} </p>
                         <p> {{disc.year}} </p>
-                    </div>
-        
+                    </div>            
                 </div>
-    
             </section>
-    
         </main>
 
     </div>

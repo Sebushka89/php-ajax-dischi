@@ -17,6 +17,9 @@ new Vue(
         },
         methods: {
             newApiCall(){
+                if(this.filter === "All"){
+                    return "http://localhost/php-ajax-dischi/php-ajax-dischi/backend/apiCall.php"
+                }
                 return "http://localhost/php-ajax-dischi/php-ajax-dischi/backend/apiCallFiltered.php" + "?genre=" + this.filter
             },
             filteredDiscs(){

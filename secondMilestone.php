@@ -18,7 +18,16 @@
 
         <header>
             <div class="logo-spotify">
-                <img class="wd" src="./img/spotify-logo.png" alt="Spotify Logo">
+                <img src="./img/spotify-logo.png" alt="Spotify Logo">
+            </div>
+            <div class="ricerca">
+            <select v-model="filter" @change="filteredDiscs()" name="genre" id="genre">
+                    <option value="All">Tutti i generi  </option>
+                    <option value="Rock">Rock</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Pop">Pop</option>
+                </select>
             </div>
         </header>
     

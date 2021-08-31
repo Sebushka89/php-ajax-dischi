@@ -5,7 +5,8 @@ new Vue(
         el: '#app',
         data: {
             // array popolato da axios
-            discs: []
+            discs: [],
+            filter: '',
         },
         created() {
             
@@ -13,6 +14,16 @@ new Vue(
                 .then((result) => {
                     this.discs = result.data;
             })   
+        },
+        methods: {
+            newApiCall(){
+                return "http://localhost/php-ajax-dischi/php-ajax-dischi/backend/apiCallFiltered.php" + "?genre=" + this.filter
+            },
+            filteredDiscs(){
+                axios.get(this.newApiCall()).then((result) =>{
+                    this.discs = result.data;
+                })
+            }
         }
     }
 );
